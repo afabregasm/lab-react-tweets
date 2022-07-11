@@ -4,6 +4,15 @@ import Tweet from "./components/Tweet";
 const tweetsArray = [
   {
     user: {
+      name: "Andrea Fàbregas Martínez",
+      image: "https://avatars.githubusercontent.com/u/105557216",
+      handle: "afabregasm",
+    },
+    timestamp: "5m ago",
+    message: "I tried to make a loop and show all tweets, but failed.",
+  },
+  {
+    user: {
       name: "Thoughts of Dog®",
       image: "https://i.imgur.com/b0EdHVV.jpg",
       handle: "dog_feelings",
@@ -35,16 +44,23 @@ const tweetsArray = [
 ];
 
 function App() {
-  // tweetsArray.forEach((index) => {
-  //   index += 1;
   return (
     <div className="App">
-      <Tweet tweet={tweetsArray[0]} />
       <Tweet tweet={tweetsArray[1]} />
       <Tweet tweet={tweetsArray[2]} />
+      <Tweet tweet={tweetsArray[3]} />
     </div>
   );
-  // });
 }
+
+// function App() {
+//   for (let i = 0; i < tweetsArray.length; i++) {
+//     return (
+//       <div className="App">
+//         <Tweet tweet={tweetsArray[i]} />
+//       </div>
+//     );
+//   }
+// }
 
 export default App;
